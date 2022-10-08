@@ -1,5 +1,12 @@
 ﻿Connect-AzAccount
-Set-AzContext -Subscription "c1a0ef4a-95ea-4c95-9ec1-6eeb59f974c4"
-$azfw = Get-AzFirewall -Name "AFW-TAPS-MTP-PROD-ZAN" -ResourceGroupName "RG-PROD-VNET-MTP-ZAN"
+#Define the subscription name variable#
+$subname = "subscription name"
+#Define the Resource Group name variable"
+$rgname = "resource group name"
+#Define the Firwall name variable#
+$asfwname = "firewall name"
+$azfw = Get-AzFirewall -Name $asfwname -ResourceGroupName $rgname
 $azfw.Deallocate()
+#Set the context for which subscription contains the firewall that this script must run against#
+Set-AzContext -Subscription $subname
 Set-AzFirewall -AzureFirewall $azfw
