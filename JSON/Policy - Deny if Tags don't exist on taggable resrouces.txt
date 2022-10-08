@@ -1,0 +1,55 @@
+{
+  "properties": {
+    "displayName": "Test Deploy if tag exists allowed resource types",
+    "policyType": "Custom",
+    "mode": "All",
+    "metadata": {
+      "category": "Regulatory Compliance"
+    },
+    "parameters": {
+      "tagName": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Department",
+          "description": "Name of the tag, such as 'department'"
+        }
+      },
+      "tagName1": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Environment",
+          "description": "Name of the tag, such as 'environment'"
+        }
+      },
+      "resourceTypes": {
+        "type": "Array",
+        "metadata": {
+          "displayName": "resourceTypes",
+          "description": "Names of the allowed resources",
+          "strongType": "resourceTypes"
+        }
+      }
+    },
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "in": "[parameters('resourceTypes')]"
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName'), ']')]",
+            "exists": "false"
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName1'), ']')]",
+            "exists": "false"
+          }
+        ]
+      },
+      "then": {
+        "effect": "deny"
+      }
+    }
+  }
+}

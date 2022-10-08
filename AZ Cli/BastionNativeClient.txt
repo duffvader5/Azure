@@ -1,0 +1,6 @@
+az login
+az account list
+az account set --subscription "<subscription ID>"
+az network bastion rdp --name "BAS-PROD-FS-ZAN" --resource-group "RG-PROD-FS-VNET-ZAN" --target-resource-id "/subscriptions/788982df-d08c-42e2-bfd7-4595ab6c0081/resourceGroups/RG-PROD-REPVM-ZAN/providers/Microsoft.Compute/virtualMachines/VM-PROD-ASRVM-ZAN"
+
+az network bastion ssh --name "<BastionName>" --resource-group "<ResourceGroupName>" --target-resource-id "<VMResourceId>" --auth-type "ssh-key" --username "<Username>" --ssh-key "<Filepath>"

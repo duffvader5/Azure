@@ -1,0 +1,2 @@
+﻿Get-MsolUser -All | where {$_.isLicensed -eq $true} | select DisplayName, userprincipalname, islicensed,
+{$_.Licenses.AccountSkuId}| Export-Csv c:\Users\trsimon\downloads\O365UserList.csv -NoTypeInformation

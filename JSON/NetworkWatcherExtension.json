@@ -1,0 +1,15 @@
+{
+    "type": "extensions",
+    "name": "Microsoft.Azure.NetworkWatcher",
+    "apiVersion": "[variables('apiVersion')]",
+    "location": "[resourceGroup().location]",
+    "dependsOn": [
+        "[concat('Microsoft.Compute/virtualMachines/', variables('vmName'))]"
+    ],
+    "properties": {
+        "publisher": "Microsoft.Azure.NetworkWatcher",
+        "type": "NetworkWatcherAgentWindows",
+        "typeHandlerVersion": "1.4",
+        "autoUpgradeMinorVersion": true
+    }
+}

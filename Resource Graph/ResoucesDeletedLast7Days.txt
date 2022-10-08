@@ -1,0 +1,6 @@
+resourcechanges
+| extend changeTime = todatetime(properties.changeAttributes.timestamp), targetResourceId = tostring(properties.targetResourceId),
+changeType = tostring(properties.changeType), correlationId = properties.changeAttributes.correlationId
+| where changeType == "Delete"
+| order by changeTime desc
+| project changeTime, resourceGroup, targetResourceId, changeType, correlationId
