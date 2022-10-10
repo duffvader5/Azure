@@ -10,3 +10,8 @@ I'm hoping that this repo is found by you wondereful people out there to add to 
 As I work through my fears of code you might as well get to know me here [Linkedin Profile](https://www.linkedin.com/in/travisesimon/)
 
 If you have any comments feel free to leave them (wherever you do that on here!)
+
+Oh yes, I should rpbobably mention what I have in here!
+
+My life revolves around Azure so pretty much everything is centered on Azure and this repo contains Powershell, KQL, Az Resource Graph, Az CLi.
+They are not pretty (**You have been warned**) LOL
