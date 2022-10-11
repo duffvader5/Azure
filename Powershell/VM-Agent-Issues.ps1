@@ -3,7 +3,7 @@ $vm.Extensions | select Publisher, VirtualMachineExtensionType, TypeHandlerVersi
 
 $rg = "rg-prod-sccm-zan"
 $vmname = "VM-HUB-SCCM-SEC"
-$extension = ""
+$extension = "MDE.Windows"
 
 ## Rerun a VM extension
-Remove-AzVMExtension -ResourceGroupName $rg -VMName $vmname -Name "myExtensionName"
+Remove-AzVMExtension -ResourceGroupName $rg -VMName $vmname -Name $extension
