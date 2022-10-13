@@ -1,7 +1,11 @@
 Connect-AzAccount
-Set-AzContext -Subscription "c1a0ef4a-95ea-4c95-9ec1-6eeb59f974c4"
-$azfw = Get-AzFirewall -Name "AFW-TAPS-MTP-PROD-ZAN" -ResourceGroupName "RG-PROD-VNET-MTP-ZAN"
-$vnet = Get-AzVirtualNetwork -ResourceGroupName "RG-PROD-VNET-MTP-ZAN" -Name "VNET-PROD-MTP-ZAN"
-$publicip = Get-AzPublicIpAddress -Name "PIP-AFW-TAPS-MTP-PROD-ZAN" -ResourceGroupName "RG-PROD-VNET-MTP-ZAN"
+Set-AzContext -Subscription "cf23bc63-db1c-4648-88ee-26c6535d6e4c"
+$azfwrg = "RG-PROD-NETWORK-ZAN"
+$fw = "AFW-PROD-CORE-ZAN"
+$vnetname = "VNET-PROD-CORE-ZAN"
+$pip = "PIP-PROD-CORE-AFW-ZAN"
+$azfw = Get-AzFirewall -Name $fw -ResourceGroupName $azfwrg
+$vnet = Get-AzVirtualNetwork -ResourceGroupName $azfwrg -Name $vnetname
+$publicip = Get-AzPublicIpAddress -Name $pip -ResourceGroupName $azfwrg
 $azfw.Allocate($vnet,$publicip)
 Set-AzFirewall -AzureFirewall $azfw
