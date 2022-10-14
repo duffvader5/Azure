@@ -1,0 +1,5 @@
+##Disjoin VM from Azure AD
+DSRegCmd /Leave
+
+#Confirm VM Azure AD Status
+dsregcmd /status

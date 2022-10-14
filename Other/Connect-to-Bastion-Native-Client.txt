@@ -1,0 +1,10 @@
+##Sign in to find Bastion resources
+az login
+az account list
+az account set --subscription "<subscription ID>"
+
+##Connect via RDP native-client
+az network bastion rdp --name "<BastionName>" --resource-group "<ResourceGroupName>" --target-resource-id "<VMResourceId>"
+
+##Connect via SSH to native-client
+az network bastion ssh --name "<BastionName>" --resource-group "<ResourceGroupName>" --target-resource-id "<VMResourceId>" --auth-type "ssh-key" --username "<Username>" --ssh-key "<Filepath>"

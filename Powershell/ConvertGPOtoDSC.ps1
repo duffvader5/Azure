@@ -1,6 +1,6 @@
 ﻿Install-Module BaselineManagement
 Import-Module BaselineManagement
-ConvertFrom-GPO -Path '.\GPOs' -OutputConfigurationScript -Verbose
+ConvertFrom-GPO -Path '.\DC-L1' -OutputConfigurationScript -Verbose
 
 ConvertFrom-GPO -Path '.\GPOs' -ConfigName 'Windows_Server_2022' -OutputConfigurationScript -Verbose
 
