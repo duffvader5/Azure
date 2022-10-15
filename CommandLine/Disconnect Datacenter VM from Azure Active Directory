@@ -1,0 +1,5 @@
+#Remove VM from Azure AD
+DSRegCmd /Leave
+
+#Confirm that the VM is no longer part of Azure AD
+DSRegCmd /Status
