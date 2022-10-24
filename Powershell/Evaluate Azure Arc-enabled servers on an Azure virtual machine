@@ -1,0 +1,11 @@
+## Link to this site for the documentation
+# https://learn.microsoft.com/en-us/azure/azure-arc/servers/plan-evaluate-on-azure-virtual-machine
+
+# Remove all Extensions on the Virtual Machines
+
+# Run this to disable to Azure Gust VM agent
+Set-Service WindowsAzureGuestAgent -StartupType Disabled -Verbose
+Stop-Service WindowsAzureGuestAgent -Force -Verbose
+
+# Block access to the Azure IMDS endpoint
+New-NetFirewallRule -Name BlockAzureIMDS -DisplayName "Block access to Azure IMDS" -Enabled True -Profile Any -Direction Outbound -Action Block -RemoteAddress 169.254.169.254

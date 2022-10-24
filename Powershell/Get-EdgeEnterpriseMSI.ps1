@@ -209,3 +209,6 @@ else {
   throw "Folder $Folder does not exist"
 }
 Write-Host "-- Script Completed: File Downloaded -- " -ForegroundColor Green
+
+## This is the file you want for the stable version
+## https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/7a616a1b-8c53-45eb-bb26-4b0b61a287d4/MicrosoftEdgeEnterpriseX64.msi
