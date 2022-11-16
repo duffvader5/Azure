@@ -1,5 +1,5 @@
 ﻿Connect-AzAccount
-Set-AzContext -Subscription "49c00109-04e3-44fc-85ed-f24f91a72f6e"
+Set-AzContext -Subscription "subscription id"
 
 $storageaccountusage = @()
 Get-AzResourceGroup | foreach-object {

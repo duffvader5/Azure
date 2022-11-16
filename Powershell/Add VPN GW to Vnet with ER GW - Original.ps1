@@ -14,12 +14,12 @@ Select-AzSubscription -SubscriptionName "Tier 0 - Production"
 #-------------------------------------------------------------------------------------------------------------------------------------
 # Declare your variables for this exercise.
 # Be sure to edit the sample to reflect the settings that you want to use.
-$RG = "RG-VNET-PROD-ZAN"
-$Location = "SouthAfricaNorth"
-$GWName = "GW-CONN-VPN-ZAN"
-$GWIPName = "PIP-TEST-VPN-ZAN"
+$RG = "Resource Group Name"
+$Location = "Regional Location"
+$GWName = "Gateway Name"
+$GWIPName = "GW Public IP"
 $GWIPconfName = "gwipconf"
-$VNetName = "VNET-WHUB-VPN-ZAN"
+$VNetName = "VNet Name"
 
 #-------------------------------------------------------------------------------------------------------------------------------------
 # Create a resource group

@@ -21,7 +21,7 @@ Param(
 
 ###########################################################
 
-Set-AzContext -Tenant "ae74bf7f-cfc3-4760-a1fe-0731afaa5502" -Subscription "3f3aa3e5-2feb-4c26-8398-6419da6fc02b"
+Set-AzContext -Tenant "TEnant ID" -Subscription "Subscription ID"
 
 ## Get the KeyVault Resource Url and KeyVault Secret Name were the certificate is stored
 $ascResource= Get-azResource -ResourceId "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.CertificateRegistration/certificateOrders/$name"

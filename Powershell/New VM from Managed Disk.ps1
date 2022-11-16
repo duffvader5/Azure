@@ -1,21 +1,21 @@
-﻿$sourceSubscriptionId = "0992747d-eae1-4a5e-8c96-ed2d1e978fc5"
-$targetSubscriptionId = "65c959c3-fcac-4ebc-966b-98754151cef0"
-$sourceResourceGroupName = "RG-GIS-PREPROD-asr"
-$targetResourceGroupName = "RG-GIS-PROD-ZAN"
+﻿$sourceSubscriptionId = "source subscription id"
+$targetSubscriptionId = "target sub id"
+$sourceResourceGroupName = "source rg"
+$targetResourceGroupName = "target rg"
 
-$VMName = “wcg-gis-as01”
-$availabilitySet = "msAvailabilitySet-Server"
-$targetNICName = "WCG-GIS-AS01-NIC"
-$targetVNetName = "VNET-WCG-PREPROD-GIS"
+$VMName = “vm name”
+$availabilitySet = "av set name"
+$targetNICName = "target nic name"
+$targetVNetName = "target vm"
 $subnetName = "default"
-$addressPrefix = "10.1.161.0/25"
-$diagStorageAccountName = "storprodgiszan"
+$addressPrefix = "vnet address prefix"
+$diagStorageAccountName = "dianostics storage account"
 $PlanName = 'byol-1061'
 $PlanProduct = 'arcgis-enterprise-106'
 $PlanPublisher = 'esri'
 
 # Login to Azure
-Login-azAccount
+Connect-azAccount
 
 # Select source subscription
 Set-azContext -Subscription $sourceSubscriptionId

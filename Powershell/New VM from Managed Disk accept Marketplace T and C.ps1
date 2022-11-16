@@ -1,14 +1,14 @@
-﻿$SubscriptionId = "65c959c3-fcac-4ebc-966b-98754151cef0"
-$ResourceGroupName = "RG-GIS-PROD-ZAN"
-$VMName = “wcg-gis-ges01”
-$NICName = Get-azNetworkInterface -Name "wcg-gis-ges01-nic" -ResourceGroupName $ResourceGroupName
-$VNetName = "VNET-WCG-PROD-GIS-asr"
+﻿$SubscriptionId = "subscriptio id"
+$ResourceGroupName = "rg name"
+$VMName = “vm name”
+$NICName = Get-azNetworkInterface -Name "nic name" -ResourceGroupName $ResourceGroupName
+$VNetName = "vnet name"
 $subnetName = "default"
-$Location = "South Africa North"
-$osDisk = "wcg-gis-ges01_OsDisk_1_b8a2b0ccbfee4236b7ff35d092057783"
-$availabilitySet = Get-azAvailabilitySet -ResourceGroupName $resourcegroupname -AvailabilitySetName "GESAvailabilitySet-Server"
-$addressPrefix = "10.1.161.0/25"
-$PlanName = "byol-1061"
+$Location = "region"
+$osDisk = "os disk name"
+$availabilitySet = Get-azAvailabilitySet -ResourceGroupName $resourcegroupname -AvailabilitySetName "availability set name"
+$addressPrefix = "vnet address prefix"
+$PlanName = "plan name"
 $PlanProduct = "arcgis-enterprise-106"
 $PlanPublisher = "esri"
 

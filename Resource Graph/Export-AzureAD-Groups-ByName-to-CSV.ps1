@@ -1,5 +1,5 @@
 ﻿#Connect-AzureAD
-$groups=Get-AzureADGroup -SearchString "GG-TAPS"
+$groups=Get-AzureADGroup -SearchString "example"
 $resultsarray =@()
 ForEach ($group in $groups){
     $members = Get-AzureADGroupMember -ObjectId $group.ObjectId -All $true 

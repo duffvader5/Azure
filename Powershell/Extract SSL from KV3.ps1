@@ -1,10 +1,10 @@
 #Connect to Azure and select subscription
 Connect-AzAccount
-Select-AzSubscription -SubscriptionId "3f3aa3e5-2feb-4c26-8398-6419da6fc02b"
+Select-AzSubscription -SubscriptionId "sub id"
    
 #Obtain the secret from keyvault
-$vaultName = "Keyvault-DEV-SNIP-ZAN"
-$secretName = "b0975ed5c8644b7eaa5f7e6385cd3e90"
+$vaultName = "kv name"
+$secretName = "secret name"
 $certString = Get-AzKeyVaultSecret -VaultName $vaultName -Name $secretName
    
 #Create a PFX from the secret and write to disk

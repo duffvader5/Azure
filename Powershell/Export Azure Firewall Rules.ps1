@@ -1,8 +1,8 @@
 ﻿Connect-AzAccount
-Set-AzContext -SubscriptionId "cc668669-7a6d-420c-958c-c65fbd342e60"
+Set-AzContext -SubscriptionId "Subscription ID"
 $FormatEnumerationLimit = -1
 
-$AFW = Get-AzFirewall -Name FW-PROD-GMT-ZAN -ResourceGroupName RG-PROD-VNET-ZAN
+$AFW = Get-AzFirewall -Name "Firewall Name" -ResourceGroupName "Reousrce Group Name"
 
 $AFW_ApplicationRuleCollection_Dump = @()
 $AFW_ApplicationRuleCollections = $AFW.ApplicationRuleCollections

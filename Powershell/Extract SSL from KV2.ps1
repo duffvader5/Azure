@@ -1,14 +1,14 @@
-$appServiceCertificateName = "WCG-Exchange-Cert-2021"
-$resourceGroupName = "RG-PROD0-KV-ZAN"
-$azureLoginEmailId = "az-c1821005@westerncape.onmicrosoft.com"
-$subscriptionId = "65c959c3-fcac-4ebc-966b-98754151cef0"
+$appServiceCertificateName = "APP Cert name"
+$resourceGroupName = "kv name"
+$azureLoginEmailId = "login address"
+$subscriptionId = "subscription id"
 
 Login-azAccount
 Set-azContext -SubscriptionId $subscriptionId
 
 $ascResource = Get-azResource -ResourceName $appServiceCertificateName -ResourceGroupName $resourceGroupName -ResourceType "Microsoft.CertificateRegistration/certificateOrders" -ApiVersion "2015-08-01"
-$keyVaultId = "/subscriptions/3f3aa3e5-2feb-4c26-8398-6419da6fc02b/resourceGroups/RG-DEV-SNIPEIT-ZAN/providers/Microsoft.KeyVault/vaults/Keyvault-DEV-SNIP-ZAN"
-$keyVaultSecretName = "cei-assetswesterncapegovza"
+$keyVaultId = "kv resource id"
+$keyVaultSecretName = "cert name"
 
 $certificateProperties=Get-Member -InputObject $ascResource.Properties.certificates[0] -MemberType NoteProperty
 $certificateName = $certificateProperties[0].Name
