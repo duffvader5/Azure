@@ -1,0 +1,25 @@
+## Documentation link: https://learn.microsoft.com/en-us/azure/vpn-gateway/openvpn-azure-ad-tenant
+# Enable the application by copying this link into a web browser
+https://login.microsoftonline.com/common/oauth2/authorize?client_id=41b23e61-6c1e-4545-b367-cd054e0ed4b4&response_type=code&redirect_uri=https://portal.azure.com&nonce=1234&prompt=admin_consent
+
+# Go to the Azure VPN application in Enterprise Applications
+
+# Configure the Point-to-Site settings
+# Tenant: TenantID for the Azure AD tenant
+
+# Enter https://login.microsoftonline.com/{AzureAD TenantID}/ for Azure Public AD
+# Enter https://login.microsoftonline.us/{AzureAD TenantID/ for Azure Government AD
+# Enter https://login-us.microsoftonline.de/{AzureAD TenantID/ for Azure Germany AD
+# Enter https://login.chinacloudapi.cn/{AzureAD TenantID/ for China 21Vianet AD
+
+# Audience: Application ID of the "Azure VPN" Azure AD Enterprise App
+
+# Enter 41b23e61-6c1e-4545-b367-cd054e0ed4b4 for Azure Public
+# Enter 51bb15d4-3a4f-4ebf-9dca-40096fe32426 for Azure Government
+# Enter 538ee9e6-310a-468d-afef-ea97365856a9 for Azure Germany
+# Enter 49f817b6-84ae-4cc0-928c-73f27289b3aa for Azure China 21Vianet
+
+# Issuer: URL of the Secure Token Service https://sts.windows.net/{AzureAD TenantID}/
+
+# Make sure to grant consent for the tenant
+

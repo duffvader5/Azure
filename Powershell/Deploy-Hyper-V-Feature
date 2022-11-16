@@ -1,0 +1,15 @@
+# Open Powershell as administrator
+# Use the following command to install Hyper-V and the Management tools
+Install-WindowsFeature -name Hyper-V -IncludeManagementtools -Restart
+
+# Create a new Virtual Switch
+New-VMSwitch -Name "InternalNATSwitch" -SwitchType Internal
+
+# Run GetNetAdapter to see what network adapters exist on the machine
+Get-NetAdapter
+
+New-NetIPAddress -IPAddress 172.16.0.4 -PrefixLength 24 -InterfaceIndex 33
+
+Now create internal address prefix
+New-NetNat -Name "InternalNATSwitch" -InternalIPInterfaceAddressPrefix 172.16.0.0/24
+
